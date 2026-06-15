@@ -9,3 +9,4 @@ APIs should return validation errors (400), not server errors (500/501), when us
 Missing validation annotations can allow invalid data into the system.
 A successful API call is not enough; the returned status code must also be verified.
 Real QA work involves discovering requirements from the system and proving where behavior differs from expected behavior.
+##
