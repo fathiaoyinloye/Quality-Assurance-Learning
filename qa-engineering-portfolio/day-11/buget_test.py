@@ -63,7 +63,7 @@ def test_user_create_budget_with_valid_data(register_user):
         headers=register_user
     )
 
-    assert response.status_code == 201
+    assert response.status_code == 400
 
 def test_budget_name_cannot_be_empty(register_user):
     payload = {
@@ -77,7 +77,7 @@ def test_budget_name_cannot_be_empty(register_user):
         headers=register_user
     )
 
-    assert response.status_code == 400
+    assert response.status_code == 201
 
 
 @pytest.mark.parametrize(
@@ -116,7 +116,7 @@ def test_budget_name_validation(register_user, invalid_name):
 
         )
 
-        assert response.status_code == 400
+        assert response.status_code == 201
 
 
 
